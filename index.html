@@ -4,9 +4,11 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Pace Keeper</title>
+
+    //favicon
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 
-    <meta name="keywords" content="stopwatch, timer, html, js, javascript, css">
+    <meta name="keywords" content="stopwatch, timer, html, js, javascript, CSS">
     <meta name="description" content="Stopwatch project using Vanilla js">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='all' href='main.css'>
@@ -15,11 +17,13 @@
 
 <body>
 
+<!-- Container Start -->
     <div class="container">
         <img src="https://t3.ftcdn.net/jpg/06/79/59/94/360_F_679599437_7NBMan1MafvlpaubGTg8dughMscSvPk5.jpg" width="110%" height="200%">
         <div class="midbody">
             <h2>Pace Keeper</h2>
 
+<!-- Functionalities naming -->
         <div id="time">
             <span class="digit" id="hour">00</span>
             <span class="text">Hr</span>
@@ -28,20 +32,25 @@
             <span class="digit" id="sec">00</span>
             <span class="text">Sec</span>
             <span class="digit" id="count">00</span>
-
         </div>
+<!-- Functionalities naming End  -->
+            
+<!-- Button Functionality -->
         <div id="buttons">
             <button class="btn" id="start">Start</button>
             <button class="btn" id="pause">Pause</button>
             <button class="btn" id="reset">Reset</button>
         </div>
+<!-- Button Functionality End -->
+
+<!-- Container End -->
+            
+<!--  Footer -->
         <footer><p>Yes! You can PAUSE the Time</p></footer>
 
         </div>
-        
-
     </div>
-
+<!-- JS File -->
     <script src="logic.js"></script>
 </body>
 </html>
