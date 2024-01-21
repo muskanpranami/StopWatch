@@ -1,24 +1,27 @@
-var start = document.getElementById('start');
-var pause = document.getElementById('pause');
-var reset = document.getElementById('reset');
-var joinhour = document.getElementById('hour');
-var joinmin = document.getElementById('min');
-var joinsec = document.getElementById('sec');
-var joininterval = document.getElementById('count');
+var start = document.getElementById('start'); //start button ID
+var pause = document.getElementById('pause'); //pause button ID
+var reset = document.getElementById('reset'); //reset button ID
+var joinhour = document.getElementById('hour'); //Hour display
+var joinmin = document.getElementById('min'); //Minutes display
+var joinsec = document.getElementById('sec'); //Seconds display
+var joininterval = document.getElementById('count'); //counter set
 var hours=0;
 var minutes=0;
 var seconds=0;
 var interval=0;
 
+// event listener on start
 start.addEventListener('click',function(){
     timer =true;
-    stopwatch();
+    stopwatch(); //function call
 });
 
+// event listener on pause
 pause.addEventListener('click', function(){
     timer = false;
 });
 
+// event listener on reset
 reset.addEventListener('click',function(){
     timer=false;
     hours = 0;
@@ -31,20 +34,21 @@ reset.addEventListener('click',function(){
     joininterval.innerHTML = '00';
 });
 
+// updates the timing of the hour/min/sec
 function stopwatch(){
     if(timer){
         interval++;
-
+//once the interval reaches 100; 1 second starts
         if(interval == 100){
             seconds++;
             interval = 0;
         }
-
+//once the seconds reaches 60; 1 minute starts
         if(seconds == 60){
             minutes++;
             seconds = 0;
         }
-
+//once the minutes reaches 60; 1 Hour starts
         if(minutes == 60){
             hours++;
             minutes=0;
@@ -56,7 +60,7 @@ function stopwatch(){
         let minString = minutes; 
         let secString = seconds; 
         let intervalString = interval; 
-
+//updating the text once the tens value is two digits
     if(hours<10){
         hourString = '0' + hourString;
     }
